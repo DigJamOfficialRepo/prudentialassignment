@@ -44,7 +44,7 @@
                 <version>2.18</version>
                 <configuration>
                     <includes>
-                        <include>**/ApiTest.java</include>
+                        <include>**/*CsvComparison.java</include>
                     </includes>
                 </configuration>
             </plugin>
