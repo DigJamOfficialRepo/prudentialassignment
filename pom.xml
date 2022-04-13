@@ -44,7 +44,7 @@
                 <version>2.18</version>
                 <configuration>
                     <includes>
-                        <include>**/*CsvComparison.java</include>
+                        <include>XmlComparison.java</include>
                     </includes>
                 </configuration>
             </plugin>

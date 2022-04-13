@@ -19,8 +19,8 @@ public class ApiTest {
 
     @Test
     public void checkBody(){
-    RestAssured.baseURI = "http://localhost:8080";
-    given()
+        RestAssured.baseURI = "http://localhost:8080";
+        given()
                 .header ("Content-type","application/json")
                 .queryParam("bookName","theSecret")
                 .when()
@@ -31,5 +31,5 @@ public class ApiTest {
                 .body ("pages",equalTo(198) )
                 .body( "ISBN",equalTo("978-1-58270-170-7"));
 
-        }
+    }
 }
