@@ -37,13 +37,16 @@
     </dependencies>
 
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.18</version>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M6</version>
                 <configuration>
                     <includes>
+<!--                        <include>ApiTest.java</include>-->
+                        <include>CsvComparison.java</include>
                         <include>XmlComparison.java</include>
                     </includes>
                 </configuration>
