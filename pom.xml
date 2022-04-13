@@ -45,7 +45,7 @@
                 <version>3.0.0-M6</version>
                 <configuration>
                     <includes>
-<!--                        <include>ApiTest.java</include>-->
+                        <include>ApiTest.java</include>
                         <include>CsvComparison.java</include>
                         <include>XmlComparison.java</include>
                     </includes>
