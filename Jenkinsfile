@@ -14,7 +14,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                 sh '''mvn clean test'''
+                 sh '''/Users/yugveer/Documents/Interviews/apache-maven-3.8.5/bin/mvn clean test'''
             }
         }
     }
