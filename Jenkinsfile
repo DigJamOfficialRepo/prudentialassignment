@@ -15,7 +15,14 @@ pipeline {
         stage('build') {
             steps {
                  sh '''/Users/yugveer/Documents/Interviews/apache-maven-3.8.5/bin/mvn clean test'''
+
             }
+        }
+    }
+    post {
+        failure{
+            emailext attachLog: true, body: '''This is to notify prudential pipeline is fail
+            ''', subject: 'Prudential Prod Pipeline Failed', to: 'digambar060985@gmail.com'
         }
     }
 }
