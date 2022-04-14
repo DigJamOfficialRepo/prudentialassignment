@@ -4,7 +4,7 @@ pipeline {
 
         stage('initialize'){
         steps{
-            echo $PATH
+            sh '''echo $PATH'''
             }
         }
         stage('checkout') {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                 mvn clean test
+                 sh '''mvn clean test'''
             }
         }
     }
