@@ -1,8 +1,7 @@
 pipeline {
     agent any
     stages {
-
-        stage('checkout'){
+        stage('checkout') {
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/DigJamOfficialRepo/prudentialassignment.git']]])
         }
         stage('build') {
