@@ -28,8 +28,9 @@ public class ApiTest {
                 .then()
                 .assertThat()
                 .body("author",equalTo("Rhonda Byrne"))
-                .body ("pages",equalTo(198) )
-                .body( "ISBN",equalTo("978-1-58270-170-7"));
+                .body("pages",equalTo   ("198") )
+                .body("ISBN",equalTo("978-1-58270-170-7"));
 
     }
 }
+
