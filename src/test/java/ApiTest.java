@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.given;
 public class ApiTest {
     @Test
     public void checkStatus(){
-        RestAssured.baseURI = "http://localhost:8080";
+        RestAssured.baseURI = "https://681ad72b-5900-4b7e-9e82-bd11b26dadd1.mock.pstmn.io";
         given()
                 .header ("Content-type","application/json")
                 .queryParam("bookName","theSecret")
@@ -19,7 +19,7 @@ public class ApiTest {
 
     @Test
     public void checkBody(){
-        RestAssured.baseURI = "http://localhost:8080";
+        RestAssured.baseURI = "https://681ad72b-5900-4b7e-9e82-bd11b26dadd1.mock.pstmn.io";
         given()
                 .header ("Content-type","application/json")
                 .queryParam("bookName","theSecret")
