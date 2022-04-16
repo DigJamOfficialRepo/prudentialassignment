@@ -5,6 +5,7 @@ pipeline {
         stage('initialize'){
         steps{
             sh '''echo $PATH'''
+            sh '''echo $JENKINS_HOME'''
             }
         }
         stage('checkout') {
