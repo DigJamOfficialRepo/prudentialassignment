@@ -13,6 +13,7 @@ public class CsvComparison {
         long targetlineCount = 0;
         boolean isSubset = true;
         try {
+            System.out.println("Running Csv File Comparison");
             File f1 = new File (System.getProperty("user.dir") + "/src/test/resources/Source.csv");
             File f2 = new File(System.getProperty("user.dir") + "/src/test/resources/Target.csv");
             srclineCount = countLineJava8(f1.getPath() );

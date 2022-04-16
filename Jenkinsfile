@@ -22,7 +22,7 @@ pipeline {
     }
     post {
         failure{
-        emailext body: '''<p>${buildStatus}: Job \'${env.JOB_NAME} [${env.BUILD_NUMBER}]\':</p> <p>Check console output at &QUOT;<a href=\'${env.BUILD_URL}\'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>''', recipientProviders: [upstreamDevelopers()], subject: 'JENKINS-NOTIFICATION: ${buildStatus}: Job \'${env.JOB_NAME} [${env.BUILD_NUMBER}]\''
-           }
+        emailext body: 'Job Fail', recipientProviders: [upstreamDevelopers()], subject: 'Job Fail'
+                }
     }
 }

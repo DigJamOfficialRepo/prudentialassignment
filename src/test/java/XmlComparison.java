@@ -12,6 +12,8 @@ public class XmlComparison {
         public void compareXmIFiles(){
     String sourceXML ="", targetXML = "", temp ="";
  try {
+
+     System.out.println("Running XML File Comparison");
      File f1 = new File(System.getProperty("user.dir") + "/src/test/resources/SourceXML.xml");
      File f2 = new File(System.getProperty("user.dir") + "/src/test/resources/TargetXML.xml");
      BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(f1)));
@@ -22,8 +24,8 @@ public class XmlComparison {
      while ((temp = br2.readLine()) != null) {
          targetXML += temp;
      }
-     System.out.println("source XML: " + sourceXML);
-     System.out.println("Target XML: " + targetXML);
+     //System.out.println("source XML: " + sourceXML);
+     //System.out.println("Target XML: " + targetXML);
  }
 catch(IOException e) {
         e.printStackTrace();
@@ -38,6 +40,7 @@ catch(IOException e) {
                 System.out.println(Diffs.get(0).getControlNodeDetail().getNode().getNodeName() + " :: " + Diffs.get(0).getTestNodeDetail().getNode().getNodeName() + " : : " + Diffs.get(0).getDescription());
             }
             Assert.assertTrue("differences Found in Source and Target xm1 files", diff.getAllDifferences().size() == 0);
+            System.out.println("Source and Target XML is same");
         }catch (Exception e){
                     e.printStackTrace();
                 }
