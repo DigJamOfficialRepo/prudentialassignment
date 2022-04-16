@@ -22,7 +22,9 @@ pipeline {
     }
     post {
         failure{
-        emailext body: 'Build Fail', recipientProviders: [culprits(), buildUser(), developers(), upstreamDevelopers(), brokenBuildSuspects(), brokenTestsSuspects(), requestor()], subject: 'Build Fail'
+        emailext body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+        Check console output at $BUILD_URL to view the results.''', recipientProviders: [culprits()], subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!'
                 }
     }
 }
