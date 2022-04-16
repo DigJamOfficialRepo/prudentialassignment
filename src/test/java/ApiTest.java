@@ -9,6 +9,7 @@ public class ApiTest {
     public void checkStatus() {
 
         try {
+            System.out.println("Running API Test");
             RestAssured.baseURI = "https://681ad72b-5900-4b7e-9e82-bd11b26dadd1.mock.pstmn.io";
             given()
                     .header("Content-type", "application/json")
@@ -17,7 +18,9 @@ public class ApiTest {
                     .get("/mockApi/get")
                     .then()
                     .assertThat()
-                    .statusCode(200);
+                    .statusCode(300);
+                    //System.out.println("Running API Test");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
