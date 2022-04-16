@@ -22,7 +22,7 @@ pipeline {
     }
     post {
         failure{
-        emailext body: 'Job Fail', recipientProviders: [upstreamDevelopers()], subject: 'Job Fail'
+        emailext body: 'Build Fail', recipientProviders: [culprits(), buildUser(), developers(), upstreamDevelopers(), brokenBuildSuspects(), brokenTestsSuspects(), requestor()], subject: 'Build Fail'
                 }
     }
 }
