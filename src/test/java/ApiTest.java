@@ -18,7 +18,7 @@ public class ApiTest {
                     .get("/mockApi/get")
                     .then()
                     .assertThat()
-                    .statusCode(200);
+                    .statusCode(300);
                     //System.out.println("Running API Test");
 
         } catch (Exception e) {
